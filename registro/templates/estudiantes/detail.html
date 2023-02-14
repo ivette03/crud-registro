@@ -1,0 +1,13 @@
+{% extends 'layout/base.html'%}
+{% block 'title'%} estudiantes {{estudiante.name}} {%endblock%}
+{% block 'content'%}
+<span class="aux-btns"><a href="{%url 'estudiante'%}">Volver atras</a></span>
+<ul class="list">
+   
+    <li><b>Nombre:</b>{{ estudiante.name }}</li>
+    <li><b>Apellido:</b>{{ estudiante.Last_name }}</li>
+    <li><b>Cedula</b>{{estudiante.document}}</li>
+    <li><b>Email:</b>{{ estudiante.email }}</li>
+    <li><b>Fecha:</b>{{ estudiante.date }}</li>
+</ul>
+{% endblock%}

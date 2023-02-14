@@ -1,0 +1,14 @@
+{% extends 'layout/base.html' %}
+{% block 'title' %}crear contacto{% endblock  %}
+{% block 'content' %}
+
+<form  action="{% url 'create' %}" method="POST">
+  {% csrf_token %}
+  <table>
+      {{ form.as_table }}
+  </table>
+  <div class="btn_save_dos">
+    <input class="input_save_dos" type="submit" value="save" >
+  </div>
+</form>
+{% endblock %} 

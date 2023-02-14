@@ -1,0 +1,15 @@
+{% extends 'layout/base.html'%}
+{%block 'title'%}Editar contacto{%endblock%}
+{%block 'content'%}
+<form action="{% url 'edit' id=id%}" method="POST">
+    {%csrf_token%}
+    <table>
+        {{form.as_table}}
+    </table>
+    <div class="btn_save_dos">
+        <input class="input_save_dos" type="submit" value="save" href="{% url 'estudiante'%}">
+      
+    </div>
+
+</form>
+{%endblock%}
